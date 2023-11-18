@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <style>
+    .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dataItem {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px;
+  border: 1px solid #ccc;
+}
+
+.detailsContainer {
+  margin-top: 20px;
+}
+
+  </style>
+  <title>Display Data on Click</title>
+</head>
+<body>
+
+<div class="container" id="dataContainer">
+  <!-- <?php
+    // Fetch data from the database and display it in div elements
+    $conn = new mysqli("your_host", "your_username", "your_password", "your_database");
+
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+    $result = $conn->query("SELECT * FROM your_table");
+
+    if ($result->num_rows > 0) {
+      while ($row = $result->fetch_assoc()) {
+        echo "<div class='dataItem' data-id='{$row['id']}'><span>{$row['name']}</span></div>";
+      }
+    }
+
+    $conn->close(); -->
+  <!-- ?> -->
+</div>
+
+<div class="detailsContainer" id="detailsContainer">
+  <!-- Display the details here -->
+  
+</div>
+
+<!-- <script src="script.js"></script> -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+  // Add click event listener to each data item
+  const dataItems = document.querySelectorAll('.dataItem');
+
+  dataItems.forEach(item => {
+    item.addEventListener('click', function () {
+      const itemId = this.getAttribute('data-id');
+      fetchDataAndDisplayDetails(itemId);
+    });
+  });
+
+  // Function to fetch data from PHP script and display details
+  function fetchDataAndDisplayDetails(itemId) {
+    const xhr = new XMLHttpRequest();
+    
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        const detailsContainer = document.getElementById('detailsContainer');
+        detailsContainer.innerHTML = xhr.responseText;
+      }
+    };
+
+    xhr.open('GET', `get_details.php?id=${itemId}`, true);
+    xhr.send();
+  }
+});
+</script>
+</body>
+</html>

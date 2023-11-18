@@ -1,0 +1,24 @@
+ 
+ #kidsec{ 
+    background-clip: url("images/mian.mp4");
+    width: 100%;
+}
+
+#kidsec video{
+    width: 100%;
+}
+#school{
+    margin-bottom: 50px;
+}
+@media(min-aspect-ratio:16/9){
+    .vid{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio:16/9){
+    .vid{
+        width: auto;
+        height: 100%;
+    }
+}

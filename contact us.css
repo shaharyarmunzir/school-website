@@ -1,0 +1,41 @@
+#mainform{
+    display: flex;
+    margin-inline: 50px;
+}
+.form1{
+    background: white;
+    width: 30%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 6px 2px white;
+}
+.form1 h3{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px
+}
+.f{
+    display: flex;
+    flex-direction: column;
+}
+.form1 .f{
+    margin-inline: 50px;
+}
+.form1 input{
+    padding: 15px;
+}
+.form1 label{
+    padding-top: 15px;
+}
+.form1 button{
+    margin-top: 25px;
+    margin-bottom: 50px;
+    padding: 10px;
+    background: rgb(25, 185, 25);
+    color: white;
+    cursor: pointer;
+}
+.form1 button:hover{
+    background: rgb(123, 243, 123);
+    color: rgb(0, 0, 0);
+}

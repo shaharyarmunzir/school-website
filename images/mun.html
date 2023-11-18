@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Document</title>
+    <style>
+        @media only screen and (max-width: 600px) {
+  
+  .cont{
+    flex-wrap: wrap;
+  }
+  .card{
+    margin-bottom: 10px;
+  }
+}
+    </style>
+    <style>
+        .cont{
+            display: flex;
+            margin-inline: 35px;
+        }
+        .container{
+            width: 250px;
+            margin-inline: 20px;
+        }
+        .card{
+            height: 340px;
+            width: 250px;
+            position: relative;
+            transition: all 1s linear;
+            transform-style: preserve-3d ;
+     
+        }
+        .front,
+        .back{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
+            font-family: 'Lobster','cursive';
+            border-radius: 20px;
+            position: absolute;
+        }
+        .front{
+            z-index: 2;
+            backface-visibility: hidden;
+        }
+        .back{
+            background: linear-gradient(#f8da61,#ff5acd,#080808);
+            z-index: 1;
+            transform: rotateY(180deg);
+        }
+        .container:hover .card{
+            transform: rotateY(180deg);
+        }
+        .container{
+            perspective: 1000px;
+        }
+        .card img{
+            width: 250px;
+            height: 100%;
+            border-radius: 20px;
+        }
+        .back {
+            display: flex;
+            flex-direction: column;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cont">
+    <div class="container">
+        <div class="card">
+            <div class="front"><img src="dhiraj sir.jpg" alt=""></div>
+            <div class="back">
+                <p>Teacher Name</p>
+                <p>Subject</p>
+                <p>Experience</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="front"><img src="dhiraj sir.jpg" alt=""></div>
+            <div class="back">
+                <p>Teacher Name</p>
+                <p>Subject</p>
+                <p>Experience</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="front"><img src="dhiraj sir.jpg" alt=""></div>
+            <div class="back">
+                <p>Teacher Name</p>
+                <p>Subject</p>
+                <p>Experience</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="front"><img src="dhiraj sir.jpg" alt=""></div>
+            <div class="back">
+                <p>Teacher Name</p>
+                <p>Subject</p>
+                <p>Experience</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="front"><img src="dhiraj sir.jpg" alt=""></div>
+            <div class="back">
+                <p>Teacher Name</p>
+                <p>Subject</p>
+                <p>Experience</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
